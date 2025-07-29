@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  rag-system:
+    build: .
+    container_name: rag-document-search
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - LLM_TYPE=ollama
+      - LLM_MODEL=llama2
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+      - USE_HYBRID_SEARCH=false
+      - USE_RERANKING=false
+    depends_on:
+      - ollama
+    restart: unless-stopped
+    networks:
+      - rag-network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-server
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    restart: unless-stopped
+    networks:
+      - rag-network
+    # Uncomment for GPU support
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  # Optional: Redis for caching (future enhancement)
+  redis:
+    image: redis:7-alpine
+    container_name: rag-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - rag-network
+    command: redis-server --appendonly yes
+
+volumes:
+  ollama-data:
+  redis-data:
+
+networks:
+  rag-network:
+    driver: bridge
