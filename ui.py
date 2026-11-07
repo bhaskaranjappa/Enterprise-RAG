@@ -13,14 +13,14 @@ from sentence_transformers import SentenceTransformer
 
 # Set up clean layout configurations
 st.set_page_config(
-    page_title="UPSC Enterprise RAG Platform",
+    page_title="Enterprise RAG",
     page_icon="📖",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-st.title("📖 UPSC Enterprise RAG Platform")
-st.caption("Production Closed-Loop Document Extraction Engine (OnlyIAS PRAHAAR Modules)")
+st.title("📖 Enterprise RAG")
+st.caption("Intelligent document search and context-grounded answers")
 st.markdown("---")
 
 # 1. Warm up resources once globally inside the cloud space container
@@ -39,6 +39,8 @@ def load_rag_resources():
 
 # Load the resources into the global context
 collection, embed_model, all_chunks = load_rag_resources()
+if not all_chunks:
+    st.sidebar.warning("Local PDF corpus not found. Keyword retrieval is disabled; semantic retrieval remains available.")
 
 # 2. Configuration Controls and Constraints Display in Sidebar
 st.sidebar.header("🛠️ Infrastructure Settings")
