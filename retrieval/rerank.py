@@ -9,6 +9,9 @@ from sentence_transformers import SentenceTransformer
 RERANK_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
 def rerank(query, hits, top_k=5):
+    if not hits:
+        return []
+
     """
     CrossEncoder scores each query-chunk pair directly.
     Unlike embeddings (which score query and chunk separately),
