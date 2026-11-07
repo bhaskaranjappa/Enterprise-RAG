@@ -7,7 +7,7 @@ import sys, os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'ingestion'))
 from load_chunk import extract_text_from_pdf, chunk_pages
 
-COLLECTION_NAME = "upsc_knowledge_base"
+COLLECTION_NAME = "knowledge_base"
 DATA_FOLDER = "./data"
 
 def connect_and_load():
