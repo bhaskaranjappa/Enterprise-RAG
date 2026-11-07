@@ -12,7 +12,7 @@ from load_chunk import extract_text_from_pdf, chunk_pages
 
 load_dotenv()
 
-COLLECTION_NAME = "upsc_knowledge_base"
+COLLECTION_NAME = "knowledge_base"
 DATA_FOLDER = "./data"
 
 def migrate():
@@ -42,7 +42,7 @@ def migrate():
             FieldSchema(name="text", dtype=DataType.VARCHAR, max_length=65535),
             FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=384) # BGE-small-en vector dimension
         ]
-        schema = CollectionSchema(fields, description="UPSC Knowledge Base Enterprise RAG Matrix")
+        schema = CollectionSchema(fields, description="Enterprise RAG document knowledge base")
         collection = Collection(name=COLLECTION_NAME, schema=schema)
         
         # Build vector index parameters for cloud search optimization
