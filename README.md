@@ -43,41 +43,75 @@ The repository includes a Streamlit interface, a FastAPI endpoint, PDF ingestion
 
 ## Architecture
 
-### End-to-end flow
+### System architecture
+
+The system has two connected paths: a document-indexing path that prepares searchable content, and a request path that retrieves evidence and generates an answer.
+
+#### 1. Document indexing
 
 ~~~mermaid
-flowchart TD
-    subgraph Ingestion["Document ingestion · offline"]
-        PDF["Authorized PDF files"] --> EXTRACT["Page-level text extraction"]
-        EXTRACT --> CLEAN["Skip first two pages and filter low-value text"]
-        CLEAN --> CHUNK["Chunk text · 600 characters / 90 overlap"]
-        CHUNK --> EMBED["BAAI/bge-small-en-v1.5 embeddings"]
-        CHUNK --> CORPUS["In-memory chunk corpus for BM25"]
-        EMBED --> STORE["Milvus collection<br/>upsc_knowledge_base"]
-    end
+flowchart LR
+    PDF["PDF documents"] --> EXTRACT["Extract text by page"]
+    EXTRACT --> CLEAN["Clean and filter"]
+    CLEAN --> CHUNK["Split into overlapping chunks"]
 
-    subgraph Query["Question answering · online"]
-        USER["User question"] --> UI["Streamlit UI or FastAPI /chat"]
-        UI --> DECOMP["Optional query decomposition"]
-        DECOMP --> DENSE["Dense vector retrieval · top 20"]
-        DECOMP --> BM25["BM25 keyword retrieval · top 20"]
-        STORE --> DENSE
-        CORPUS --> BM25
-        DENSE --> RRF["Reciprocal Rank Fusion"]
-        BM25 --> RRF
-        RRF --> RERANK["CrossEncoder reranking"]
-        RERANK --> CONTEXT["Selected context passages"]
-        CONTEXT --> LLM["Groq · Llama 3.3 70B Versatile"]
-        DECOMP --> LLM
-        LLM --> ANSWER["Grounded answer or NOT FOUND"]
-        ANSWER --> SOURCES["Source and page citations"]
-    end
+    CHUNK --> EMBED["Generate embeddings<br/>BGE small English"]
+    EMBED --> VECTOR[("Milvus vector collection")]
+
+    CHUNK --> CORPUS["Build searchable text corpus<br/>with source and page metadata"]
+
+    classDef source fill:#EEF2FF,stroke:#6366F1,color:#1E1B4B,stroke-width:1.5px
+    classDef process fill:#F8FAFC,stroke:#94A3B8,color:#0F172A,stroke-width:1.2px
+    classDef storage fill:#ECFEFF,stroke:#0891B2,color:#164E63,stroke-width:1.5px
+
+    class PDF source
+    class EXTRACT,CLEAN,CHUNK,EMBED process
+    class VECTOR,CORPUS storage
 ~~~
+
+The vector database stores embeddings and chunk metadata. The text corpus is also loaded by the application for keyword retrieval.
+
+#### 2. Live question answering
+
+~~~mermaid
+flowchart TB
+    QUESTION["User question"] --> ENTRY["Streamlit interface<br/>or FastAPI endpoint"]
+    ENTRY --> ORCHESTRATE["Query orchestration<br/>optional decomposition"]
+
+    ORCHESTRATE --> DENSE["Semantic retrieval"]
+    ORCHESTRATE --> KEYWORD["Keyword retrieval"]
+
+    VECTOR[("Milvus vector collection")] --> DENSE
+    CORPUS["In-memory text corpus"] --> KEYWORD
+
+    DENSE --> FUSION["Reciprocal Rank Fusion"]
+    KEYWORD --> FUSION
+
+    FUSION --> RERANK["CrossEncoder reranking"]
+    RERANK --> CONTEXT["Select evidence and build prompt"]
+    CONTEXT --> GENERATE["Groq-hosted language model"]
+    GENERATE --> ANSWER["Grounded response"]
+    ANSWER --> CITATIONS["Answer with source/page references<br/>or NOT FOUND when evidence is insufficient"]
+
+    classDef input fill:#EEF2FF,stroke:#6366F1,color:#1E1B4B,stroke-width:1.5px
+    classDef process fill:#F8FAFC,stroke:#94A3B8,color:#0F172A,stroke-width:1.2px
+    classDef retrieval fill:#ECFEFF,stroke:#0891B2,color:#164E63,stroke-width:1.5px
+    classDef model fill:#F5F3FF,stroke:#8B5CF6,color:#2E1065,stroke-width:1.5px
+    classDef result fill:#ECFDF5,stroke:#10B981,color:#064E3B,stroke-width:1.5px
+
+    class QUESTION input
+    class ENTRY,ORCHESTRATE,CONTEXT process
+    class DENSE,KEYWORD,FUSION,RERANK retrieval
+    class GENERATE model
+    class ANSWER,CITATIONS result
+~~~
+
+The vector database can be local Milvus or a configured Zilliz Cloud cluster. The application loads the text corpus at startup to support BM25 retrieval.
 
 ### Retrieval and generation stages
 
 1. **Ingestion:** PDF text is extracted page by page. The first two pages are skipped. Remaining text is split into 600-character chunks with 90-character overlap.
-2. **Embedding:** Chunks are encoded using **BAAI/bge-small-en-v1.5** and stored in the Milvus collection **upsc_knowledge_base**.
+2. **Embedding:** Chunks are encoded using **BAAI/bge-small-en-v1.5** and stored in the Milvus collection **document_knowledge_base**.
 3. **Candidate retrieval:** The query is searched through Milvus dense retrieval and BM25 keyword retrieval. Each path returns up to 20 candidates.
 4. **Fusion:** Reciprocal Rank Fusion combines the ranked result lists.
 5. **Reranking:** **cross-encoder/ms-marco-MiniLM-L-6-v2** scores query-passage pairs. The pipeline selects up to five passages for a simple query and up to ten for a decomposed query.
@@ -157,7 +191,7 @@ The Compose file starts etcd, MinIO, and standalone Milvus. It does not start th
 python ingestion/embed_store.py
 ~~~
 
-This creates the **upsc_knowledge_base** collection, generates embeddings, inserts chunks, and runs a verification search.
+This creates the **document_knowledge_base** collection, generates embeddings, inserts chunks, and runs a verification search.
 
 > **Important:** The local ingestion script drops and recreates the collection when it already exists. Running it again replaces the existing local collection data.
 
