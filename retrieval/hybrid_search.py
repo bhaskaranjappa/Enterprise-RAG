@@ -39,12 +39,18 @@ def vector_search(collection, model, sub_queries, top_k=20):
     """Dense vector search — queries multiple sub-query targets cleanly."""
     aggregated_hits = {}
 
+    # Zilliz Cloud AUTOINDEX uses "level"; local IVF_FLAT uses "nprobe".
+    if os.getenv("ZILLIZ_ENDPOINT") and os.getenv("ZILLIZ_TOKEN"):
+        search_params = {"metric_type": "COSINE", "params": {"level": 1}}
+    else:
+        search_params = {"metric_type": "COSINE", "params": {"nprobe": 10}}
+
     for sub_q in sub_queries:
         query_embedding = model.encode([sub_q], normalize_embeddings=True).tolist()
         results = collection.search(
             data=query_embedding,
             anns_field="embedding",
-            param={"metric_type": "COSINE", "params": {"nprobe": 10}},
+            param=search_params,
             limit=top_k,
             output_fields=["text", "source", "page"]
         )
