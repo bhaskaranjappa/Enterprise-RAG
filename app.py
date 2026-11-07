@@ -8,13 +8,13 @@ from pymilvus import connections, Collection
 
 # 1. Page Configuration Setup
 st.set_page_config(
-    page_title="UPSC Enterprise RAG System",
+    page_title="Enterprise RAG",
     page_icon="📖",
     layout="wide"
 )
 
-st.title("📖 UPSC Enterprise RAG Platform")
-st.caption("Production Closed-Loop Document Extraction (OnlyIAS PRAHAAR Modules)")
+st.title("📖 Enterprise RAG")
+st.caption("Intelligent document search and context-grounded answers")
 st.markdown("---")
 
 # 2. System Environmental Secrets Loading
