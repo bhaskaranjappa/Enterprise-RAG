@@ -23,6 +23,17 @@ def migrate():
         print("[Error] Missing ZILLIZ_ENDPOINT or ZILLIZ_TOKEN in .env configuration.")
         return
 
+    pdf_files = [
+        f for f in os.listdir(DATA_FOLDER)
+        if f.lower().endswith(".pdf")
+    ] if os.path.isdir(DATA_FOLDER) else []
+
+    if not pdf_files:
+        raise FileNotFoundError(
+            f"No PDF files found in '{DATA_FOLDER}'. Add your source PDFs before migration."
+        )
+
+    print(f"Found {len(pdf_files)} PDF file(s) for cloud migration.")
     print(f"Connecting to Zilliz Cloud Endpoint: {endpoint}")
     connections.connect(
         alias="default",
@@ -55,13 +66,16 @@ def migrate():
         print("Schema creation and AUTOINDEX allocation complete.")
     else:
         collection = Collection(COLLECTION_NAME)
-        print(f"Target cluster collection '{COLLECTION_NAME}' successfully targeted.")
+        existing_count = collection.num_entities
+        if existing_count > 0:
+            raise RuntimeError(
+                f"Collection '{COLLECTION_NAME}' already contains {existing_count} entities. "
+                "Migration stopped to prevent duplicate insertion."
+            )
+        print(f"Existing empty collection '{COLLECTION_NAME}' found; using it.")
 
     print("Initializing embedding extraction layer...")
     model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-    
-    pdf_files = [f for f in os.listdir(DATA_FOLDER) if f.endswith(".pdf")]
-    print(f"Found {len(pdf_files)} files for cloud migration.")
     
     for pdf_file in pdf_files:
         print(f"Processing: {pdf_file}")
