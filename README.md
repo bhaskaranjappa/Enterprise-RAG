@@ -174,7 +174,7 @@ Open **.env** and add your Groq API key. For local Milvus, leave the Zilliz vari
 New-Item -ItemType Directory -Force data
 ~~~
 
-Place your authorized PDF files in the **data/** directory. The source documents are intentionally not included in this repository. The application needs access to the local PDFs for ingestion and for rebuilding the BM25 corpus.
+Place your authorized PDF files in the **data/** directory. The source documents are intentionally not included in this repository. The application needs access to the local PDFs for ingestion and for rebuilding the BM25 corpus. If the directory is empty or absent, the app skips BM25 keyword retrieval and continues with semantic retrieval from the configured vector collection. Add authorized PDFs to enable hybrid retrieval.
 
 ### 5. Start local Milvus infrastructure
 
