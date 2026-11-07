@@ -1,0 +1,176 @@
+[
+  {
+    "question": "list all d topic names in chapter 3 from d pdf",
+    "expected_answer": "The topic names listed under Chapter 3 (Scheduled Tribes) are:\nBASIC DATA AND FACTS ABOUT ST’S\nGENERAL ISSUES AND CHALLENGES CONCERNING STS\nWELFARE PROGRAMMES FOR STS\nMSP FOR MINOR FOREST PRODUCE (MFP)\nSCHEDULED TRIBES AND OTHER TRADITIONAL FOREST DWELLERS (RECOGNITION OF FOREST RIGHTS) ACT, 2006\nDENOTIFIED, NOMADIC AND SEMI-NOMADIC TRIBES\nPARTICULARLY VULNERABLE TRIBAL GROUPS (PVTGS)",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Social Justice"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "summarise d role of student movements in post independence india. and mention d key things in it.",
+    "expected_answer": "Summary of the role of student movements in post-independence India and key aspects:\nRole and Impact: Rooted in socio-economic issues, post-independence student movements transformed Indian society and heavily influenced national political discourse.\nKey Catalysts/Drivers:\nQuest for Freedom: Universities were at the forefront of the resistance during the Emergency (1975–77).\nState Policy and Unemployment: Protests against government reservation policies (in 1990, 2006, and 2015) and rising unemployment among educated youth.\nSystem Critiques: Activism driven by socio-economic deprivation (such as tribal students) and perceived inadequacies of an authoritarian education system.\nDigital Tools: Quick information systems like social media catalysing contemporary mobilization.\nMajor Movements:\nLinguistic Protests (1950s–1970s): Demands for linguistic states and the Anti-Hindi movement of 1965 in Tamil Nadu and Odisha.\nEmergency & Aftermath (1970s–1990s): The Jayaprakash Narayan (JP) movement arising from the 1974 'Navnirman Andolan' in Gujarat (started over a hike in hostel food fees).\nMandal Era: Upper-caste student protests in the 1990s opposing the Mandal Commission's recommendations.\nPost-Liberalisation: Protests against the Citizenship Amendment Act (CAA) and National Register of Citizens (NRC), the Telangana movement led by students of Osmania University, and protests following Rohith Vemula's suicide.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: POST INDEPENDENCE (Pages 74–75)"
+    ],
+    "question_type": "summarization"
+  },
+  {
+    "question": "wt r d economic policies of british towards indian states.",
+    "expected_answer": "Economic policies of the British:\nDepending on the interpretation of \"Indian states\" (as India as a whole, or the princely states):\n1. Economic Policies towards India (as a colonised nation):\nObjective: Protect and promote British economic interests by transforming the colony into a supplier of raw materials and a consumer of British finished industrial products.\nFirst Phase (1757–1813): Focused on high revenue collection, financing British trade using Indian resources, and starting the unilateral \"drain of wealth\" to Britain.\nEarly 19th Century: Shifted to converting India into a market for Britain's finished goods, causing the decline of local handicraft industries and a forced, artificial commercialization of agriculture.\nPost-1858: Kept India open for British capital investment (railways, shipping, etc.) while incurring \"home charges\" (salaries and pensions paid to employees in England).\n2. Policies towards the Princely States (referred to as \"Indian States\"):\nPolicy of Ring of Fence (1765–1813): Employing subsidiary forces and creating buffer zones to protect British borders.\nPolicy of Subordinate Isolation (1813–1857): Enforcing the princely states to accept British superiority and surrender exterior sovereignty while retaining internal administrative sovereignty.\nPolicy of Subordinate Union (1857–1935): Asserting the British right to intervene in the internal affairs of princely states and controlling their international affairs.\nPolicy of Equal Federation (1935–1947): Proposing a Federal Assembly under the Government of India Act of 1935 to enlist princely support to reduce the power of the National Movement.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: MODERN HISTORY (Pages 43–44)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "wt is bodo accord.",
+    "expected_answer": "According to the provided document, the Bodo Accord refers to peace agreements signed to resolve Bodo aspirations and bring an end to the long-run violence in Bodoland, Assam:\nGenesis: Bodo aspirations were sparked by the Assam Accord of 1985, leading to the resurrection of the Bodo statehood claim in 1987 by the ABSU.\nFirst Pact (1993): Signed by the ABSU and Bodo, establishing the Bodoland Autonomous Council (BAC) with restricted political authority.\nSecond Pact (2003): Signed by the state, the Bodo Liberation Tiger Force (BLTF), and the extremist group. This established the Bodoland Territorial Council (BTC) as an autonomous organization under the Sixth Schedule of the Constitution.\nRecent Context: A historic Bodo peace accord was signed by the Assam state government, after which former militants belonging to five Karbi splinter groups laid down their arms.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: INTERNAL SECURITY (Page 23)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "wt r d effects of globalization towards LBGTQ+ community.",
+    "expected_answer": "Effects of globalization on the LGBTQ+ community:\nPositive Impacts:\nSocial Acceptance & Reforms: Fostered global acceptance, such as the legalization of same-sex marriage in the USA and the decriminalization of consensual same-sex relations in India.\nInclusivity & Community Building: Brought people closer to promote equal access, eliminate discrimination, and facilitate the formation of LGBTQ+ communities for collective advocacy.\nSafety & Connection: Developed technological safety applications and opened access to global dating platforms (e.g., Tinder) to connect with like-minded individuals.\nJob & Economic Opportunities: Offered better job prospects, social status improvements, and highlighted the economic benefits of inclusion to avoid lost economic output.\nContent & Cultural Integration: Opened doors for diverse content creation across platforms and allowed individuals to integrate cultural aspects into their lives.\nNegative Impacts:\nDestruction of Indigenous Cultures: Exported a Western, hegemonic notion of LGBT identity to traditional societies, destroying indigenous sexual cultures and diversities.\nTargeted Harassment & Homelessness: Interconnectedness of social media has made it easier to identify and target homeless LGBT youth. Significant school-level bullying and harassment also persist.\nPersistent Disparities & Inequalities: Left the community with limited legal protection in various regions (like India), and legal inequalities remain regarding marriage, adoption, and employment, alongside ongoing healthcare access barriers.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: INDIAN SOCIETY (Pages 60–61)"
+    ],
+    "question_type": "summarization"
+  },
+  {
+    "question": "explain whistle blowers protection act in india",
+    "expected_answer": "Based on the uploaded document, here is an explanation of the Whistleblowers' Protection Act in India, including its evolution, salient features, and challenges:\n1. Definition\nWhistleblowing is the act of exposing alleged bribery, incompetence, corruption, fraud, or unethical behavior within public, private, or third-sector organizations by an authority figure or the public.\n2. Evolution of the Act\n2001: The Law Commission recommended a law protecting whistleblowers to combat corruption.\n2003: The murder of Satyendra Dubey, an engineer who exposed corruption in the Golden Quadrilateral project in Bihar, fueled demands for protective legislation.\n2004: The Supreme Court ordered the government to establish an administrative machinery for complaints, resulting in the Public Interest Disclosure and Protection of Informers Resolution (PIDPIR).\n2005: India signed the UN Convention against Corruption.\n2011/2014: The Whistle Blowers Protection Bill was introduced in 2011 and enacted as an Act in 2014.\n3. Salient Features of the Act\nProtection against Harassment: It protects individuals who report abuse, deliberate misuse of authority, or arbitrary discretion by public officials from harassment and victimization.\nIdentity Security: It ensures the whistleblower’s identity is kept secure. The Vigilance Commission is barred from disclosing the identity except to the head of the department if deemed necessary. Penalties are imposed on anyone who leaks the whistleblower’s identity.\nNo Anonymous Complaints: Every complaint must include the identity of the complainant. Competent authorities cannot take action until the complainant's identity is established.\nTime Frame: Complaints must be filed within a span of seven years.\nCriminalizing False Claims: Anyone who maliciously or unintentionally discloses the identity of a complainant faces up to three years in prison and a fine of up to Rs 50,000.\nAppeal: Any person aggrieved by an order of the Competent Authority has 60 days to appeal to the High Court.\nExemptions: The Act does not apply to the staff and officers of the Special Protection Group (SPG).\nSupersedes the Official Secrets Act (OSA), 1923: The Act allows public interest disclosures to competent authorities even if they violate the OSA, provided they do not jeopardize the nation's sovereignty.\n4. Issues and Challenges\nDelayed Implementation: Widespread delays in implementing the Act have left whistleblowers and RTI activists vulnerable to harassment, attacks, or being killed.\nVulnerability due to Mandatory Identity Disclosure: Because anonymous complaints are barred and the whistleblower's identity must be revealed to the authority, it poses a direct threat to their lives.\nWeak Corporate and Organizational Execution: In many industries, the whistleblower policy manual is not effectively implemented or used.\nAttempted Dilutions: The Whistle-blower Amendment Bill of 2015 (which eventually lapsed in 2019) attempted to dilute the Act by prohibiting disclosures of information restricted under the OSA and removing national security issues from its purview.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Governance (Pages 88–90)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "extract d image in evolution of RTI in india in page no.77 of this pdf",
+    "expected_answer": "The image/diagram under the section \"Evolution of RTI in India\" on page 77 of the PDF is structured as follows:\n[Right to Information] ➔ [Empowers citizens]\n                            │\n                            ├──➔ Demand responsibility from public servants\n                            │\n                            ├──➔ Hold public servant accountable\n                            │\n                            └──➔ Bring to light of poor governance & bureaucratic apathy",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Governance (Page 77)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "extract d image in page no.66 of this pdf",
+    "expected_answer": "Based on the uploaded documents, here is the extraction of the diagrams found on page 66 from the two most recently referenced PDFs:\nOption A: From the \"INDIAN SOCIETY\" PDF (Page 66)\nThis page contains a handwritten mind map on Tribal Issues:\nCenter of Mind Map:\nTribal Issues\nSurrounding Branches:\nencroachment & alienation (Top)\nIdentity loss (Top-Right)\nRampant poverty (Middle-Right)\nunemployment (Bottom-Right)\nHealth Issues (Bottom)\nvulnerability and exploitation (Bottom-Left)\npoor HDI (Middle-Left)\nforest related issues (Top-Left)\n\nOption B: From the \"GOVERNANCE\" PDF (Page 66)\nThis page contains a flow chart outlining the Model of Sports Governance in Country:\nLeft Column (Autonomous Bodies recognized by Olympic Charter):\nEntities: Indian Olympic Association, State Olympic Association, National Sports Federations, Sports Federations\nMains Roles:\nInternational representation\nConduct local sporting events\nPromote sports in the country\nCentral Concept & Inputs:\nCore: Model of Sports Governance in Country\nInput Flows (Arrows): Financial Assistance, Sports Infrastructure, Sporting Events\nRight Column (Government Bodies):\nEntities: Ministry of Youth Affairs and Sports, Sports Authority of India, Sports Institutes, Training centres\nMains Roles:\nProvide sports infrastructure\nProvide financial assistance\nPromote capacity building",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: INDIAN SOCIETY (Page 66)",
+      "PRAHAAR ReDEFINED 3.0: Governance (Page 66)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "i want trends in population growth TABLE as it is in this pdf",
+    "expected_answer": "| Period | Details |\n|---|---|\n| **Period of Stagnant Population (1901-1921)** | High birth rate counterbalanced by high death rate. The Census of 1921 recorded a negative growth rate hence the year 1921 is called the year of the ‘Demographic Divide’. |\n| **Period of steady growth (1921-1951)** | The high birth rate continued. The mortality rate started showing a downward trend due to improvements in health and sanitation conditions along with a developed distribution system. Hence it was mortality-induced growth. |\n| **Period of rapid high growth (1951-1981)** | There was a steep fall in the mortality rate but the fertility rate remained high resulting in a very high rate of population growth. It is referred to as the period of population explosion which was the result of fertility-induced growth. |\n| **Period of high growth with definite signs of slowing down (1981-2011)** | The highest-ever growth rate of 22.2 % was recorded in 1971-1981 after the declining trend in population growth started. The recent Census of 2021 reported addition of fewer people than its previous decade. This indicates a positive result of official efforts of birth control and people’s enhanced awareness led to an inclination towards smaller families. |",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: GEOGRAPHY & DM (Pages 39-40)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "gandhi's seven sins",
+    "expected_answer": "As published in his weekly \"Young India,\" Mahatma Gandhi identified the following seven sins:\nPolitics without principles (e.g., political defections, criminal cases against politicians)\nWealth without work (e.g., cryptocurrency price speculation, high Non-Performing Assets in banks)\nPleasure without conscience (e.g., marital rape, environmental plundering for development)\nKnowledge without character (e.g., cyberattacks on national infrastructure, female feticide)\nScience without humanity (e.g., use of nuclear weapons, manufacture of toxic carcinogens like cigarettes without bans)\nCommerce without morality (e.g., privacy violations by tech companies, commodification of bodies for marketing)\nReligion without sacrifice / Manavaseva = Madhava Seva (e.g., religious fundamentalism, prioritizing ritualism over true devotion)",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Ethics (Chapter 8, Page 100)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "summary of plastic pollution",
+    "expected_answer": "Based on the provided document, plastic pollution is summarized as follows:\nDefinition: The harmful accumulation of micro, meso, and macro plastic objects in the environment that negatively impacts wildlife, habitats, and human health.\nKey Statistics: India produces 3.5 million tonnes of plastic annually (per capita consumption of 25,490 grams) and ranks 94th globally in per capita plastic waste generation. Around 60% of India's plastic waste is claimed to be recycled.\nCauses: Driven by the widespread use of single-use plastics, rapid urbanization, lack of recycling infrastructure, excessive plastic packaging, and improper disposal/illegal dumping.\nImpacts: Causes extensive environmental and marine life damage (ingestion and entanglement), contaminates waterways, introduces toxic chemicals and microplastics into the food chain, contributes to greenhouse gas emissions through production and incineration, and persists in ecosystems for centuries.\nSolutions & Initiatives: The government banned single-use plastics on July 1, 2022, and increased allowed plastic bag thickness (up to 120 microns by December 2022). Proposed solutions include raising public awareness, enforcing Extended Producer Responsibility (EPR), adopting Material Recovery Facility (MRF) models under public-private partnerships, promoting biodegradable alternatives, and banning microbeads in personal care products.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: ECOLOGY & ENVIRONMENT (Chapter 8, Pages 67-70)"
+    ],
+    "question_type": "summarization"
+  },
+  {
+    "question": "summarize d concept of cold war.",
+    "expected_answer": "Definition: A period of intense rivalry between the United States (capitalist) and the Soviet Union (communist) spanning from the late 1940s to the early 1990s. The term signifies a state where there is no direct, large-scale military conflict between the two superpowers, but rather a series of geopolitical competitions and proxy wars.\nCauses: Driven by ideological differences, disagreements over the post-WWII division of Europe, mutual distrust, a dangerous nuclear arms race, and global geopolitical competition.\nKey Events: Major events included the Truman Doctrine (1947), the Marshall Plan (1948), the Berlin Airlift (1948-1949), the Korean War (1950-1953), the Cuban Missile Crisis (1962), and the Vietnam War (1955-1975).\nImpacts: Created a bipolar world split into two blocs, spurred the space and arms races, caused regional instability, led to significant military spending, and concluded with the dissolution of the USSR in 1991.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: WORLD HISTORY (Chapter 24, Pages 63-66)"
+    ],
+    "question_type": "summarization"
+  },
+  {
+    "question": "wt r d teaching of buddha",
+    "expected_answer": "According to the \"Ethics\" document, Gautama Buddha's core teachings include:\nMorality (Kamma): Actions are judged as good or bad based on their motivating intention. Bad actions (Akusala Kamma) are rooted in greed, hatred, or selfishness, while meritorious actions (Kusala Kamma) are rooted in generosity, love, and wisdom.\nThree Essentials for Life:\nWisdom (Prajna): Leads to the right intention.\nEthical conduct (Sila): Guides to right speech, action, livelihood, and effort.\nConcentration (Samadi): Focuses on right mindfulness and concentration.\nEight Fold Path: Consists of Right Knowledge (or Views), Right Resolve, Right Speech, Right Conduct (or Action), Right Livelihood, Right Effort, Right Mindfulness, and Right Meditation (or Concentration).\nFour Noble Truths:\nThe Truth of Suffering: Suffering is the real truth of our existence.\nExcess Desire: Cravings and ignorance are the cause of suffering.\nThe end of Suffering: Eliminating desire stops suffering (attaining \"nirvana\").\nThe path for Ending Suffering: Following the eightfold path (the middle path).\nPancasila (Five Refrains): Five voluntary precepts—No killing, No stealing, No lying, No sexual misconduct, and No intoxicants.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Ethics (Chapter 8, Pages 95-96)"
+    ],
+    "question_type": "extraction"
+  },
+  {
+    "question": "who is d present CJI of india",
+    "expected_answer": "NOT_IN_DOCS",
+    "source_docs": [],
+    "question_type": "extraction"
+  },
+  {
+    "question": "how does d world war 2 in world history is related to geographical changes in geography pdf",
+    "expected_answer": "NOT_IN_DOCS",
+    "source_docs": [],
+    "question_type": "extraction"
+  },
+  {
+    "question": "\"How does population growth pattern data relate to historical events like wars or independence movements in the same period?\"",
+    "expected_answer": "NOT_IN_DOCS",
+    "source_docs": [],
+    "question_type": "extraction"
+  },
+  {
+    "question": "\"How does the concept of probity in governance relate to Gandhi's seven sins as discussed in the ethics material?\"",
+    "expected_answer": "NOT_IN_DOCS (The provided documents do not contain any explicit text or analysis explaining how the concept of probity in governance relates directly to Gandhi's seven sins).",
+    "source_docs": [],
+    "question_type": "comparison"
+  },
+  {
+    "question": "\"How do whistleblower protections and ethical conduct standards connect in governance and ethics frameworks?\"",
+    "expected_answer": "The documents state that whistleblowing \"is done by an employee where he finds that ethical rules are broken knowingly or unknowingly and there exists an imminent danger to the company, consumers or the public.\"\nWhistleblowing is supported on \"Ethical\" grounds as \"it is for the greater good of the company, consumers or the public.\"\nTo protect individuals who expose these violations, the Second ARC recommends that \"Appropriate legislation must be enforced to protect innocent whistle blowers\" and that they \"should be protected by ensuring confidentiality and anonymity, protection from victimization in career, and other administrative measures to prevent bodily harm and harassment.\"",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Ethics (Pages 133, 134)"
+    ],
+    "question_type": "comparison"
+  },
+  {
+    "question": "\"How does the Right to Information Act relate to ethical principles of transparency discussed in governance and ethics?\"",
+    "expected_answer": "The Right to Information Act, 2005 was enacted \"in recognition of the need for transparency in public affairs\" as a \"legislation empowering people and promoting transparency.\"\nThe RTI \"heralded an era of transparency from darkness of secrecy\" and \"promotes openness, transparency and accountability in administration by making the government more open to public scrutiny.\"\nThe Second ARC notes under \"Right to Information: Master Key to Good Governance\" that \"The Official Secrets Act, 1923 should be repealed\" to prioritize the public's right to openness, and ruled that the office of the Chief Justice of India (CJI) is a public authority open to scrutiny under the RTI Act to enhance transparency.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: Governance (Pages 41, 77, 83)"
+    ],
+    "question_type": "comparison"
+  },
+  {
+    "question": "\"How did the partition events in modern Indian history influence post-independence challenges around refugee resettlement and integration?\"",
+    "expected_answer": "Widespread Refugee Crisis: The partition of India in 1947 caused a massive population exchange and extreme communal violence, leading to a massive \"refugee issue.\" The rehabilitation of these refugees became one of the Indian government's greatest post-independence concerns.\nJammu & Kashmir: Western Pakistani refugees who fled to J&K during the 1947 partition faced systematic integration barriers, as they were denied basic rights and identity in the region.\nDemographic Inversion in Tripura: The heavy influx of refugees from newly formed Bangladesh (after the 1971 war) caused severe socioeconomic discontent, a complete demographic inversion, and a consequent surge in terrorist activities.\nEthnic and Demographic Shifts in Assam: Influxes of illegal migrants and refugees from East Pakistan (after the 1947 partition and later during the 1971 Bangladesh war) heavily shifted Assam's demography, giving rise to acute ethnic tensions and insurgencies.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: INDIAN SOCIETY (Page 80)",
+      "PRAHAAR ReDEFINED 3.0: POST INDEPENDENCE (Pages 24, 37)",
+      "PRAHAAR ReDEFINED 3.0: INTERNAL SECURITY (Pages 20, 22)"
+    ],
+    "question_type": "comparison"
+  },
+  {
+    "question": "\"How did the princely states' integration after independence connect to the political movements described in modern Indian history?\"",
+    "expected_answer": "Praja Mandals and Mobilization: Pre-independence political mobilization in the princely states was deeply influenced by the mainstream national movement, leading to the creation of local political organizations known as Praja Mandals or State People Conferences.\nShift in Congress Policy: The Indian National Congress (INC) gradually aligned itself with these local movements. In the 1920 Nagpur session, the INC urged princely rulers to establish accountable administrations. In the Tripura session, Congress officially identified itself with the State People Movements. Finally, during the 1942 Quit India Movement, the struggles of the people in the princely states were formally united with those of British India.\nIntersection with Peasant and Ideological Movements: Post-independence integration often overlapped with existing regional agitations. For instance, in Hyderabad, the integration process was deeply connected to a potent communist-led peasant movement in the Telangana region, where peasant squads defended against the Nizam's Razakar paramilitary atrocities before the Indian military intervened under Operation Polo.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: MODERN HISTORY (Pages 103–104)",
+      "PRAHAAR ReDEFINED 3.0: INTERNAL SECURITY (Page 104)",
+      "PRAHAAR ReDEFINED 3.0: POST INDEPENDENCE (Page 28)"
+    ],
+    "question_type": "comparison"
+  },
+  {
+    "question": "\"How did Gandhi's ideology during the freedom movement influence post-independence policy decisions like Panchayati Raj or village development?\"",
+    "expected_answer": "Panchayati Raj and Decentralization: Gandhi strongly advocated for Swaraj (self-rule) and local self-government. He believed that the \"voice of the Panchayat is the voice of the people.\" This directly influenced India's post-independence commitment to decentralization, leading to the entrustment of 2.5 lakh Gram Panchayats to provide basic services and execute local economic development plans.\nRam Rajya and Village-Centric Development: His concept of Ram Rajya envisioned India as a welfare state where the necessities of the downtrodden, the welfare of the commoner, and progress through indigenous cottage industries were central. This laid the foundation for focusing development on rural and small-scale domestic sectors.\nSarvodaya: Gandhi's ideological commitment to Sarvodaya (the \"rise of all\") served as the direct inspiration for post-independence voluntary land reforms, specifically the Bhoodan and Gramdan movements led by Acharya Vinoba Bhave.",
+    "source_docs": [
+      "PRAHAAR ReDEFINED 3.0: INDIAN SOCIETY (Page 75)",
+      "PRAHAAR ReDEFINED 3.0: Governance (Pages 41–42, 44)"
+    ],
+    "question_type": "comparison"
+  }
+]
