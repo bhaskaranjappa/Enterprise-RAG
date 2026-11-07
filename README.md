@@ -111,7 +111,7 @@ The vector database can be local Milvus or a configured Zilliz Cloud cluster. Th
 ### Retrieval and generation stages
 
 1. **Ingestion:** PDF text is extracted page by page. The first two pages are skipped. Remaining text is split into 600-character chunks with 90-character overlap.
-2. **Embedding:** Chunks are encoded using **BAAI/bge-small-en-v1.5** and stored in the Milvus collection **document_knowledge_base**.
+2. **Embedding:** Chunks are encoded using **BAAI/bge-small-en-v1.5** and stored in the Milvus collection **knowledge_base**.
 3. **Candidate retrieval:** The query is searched through Milvus dense retrieval and BM25 keyword retrieval. Each path returns up to 20 candidates.
 4. **Fusion:** Reciprocal Rank Fusion combines the ranked result lists.
 5. **Reranking:** **cross-encoder/ms-marco-MiniLM-L-6-v2** scores query-passage pairs. The pipeline selects up to five passages for a simple query and up to ten for a decomposed query.
@@ -191,7 +191,7 @@ The Compose file starts etcd, MinIO, and standalone Milvus. It does not start th
 python ingestion/embed_store.py
 ~~~
 
-This creates the **document_knowledge_base** collection, generates embeddings, inserts chunks, and runs a verification search.
+This creates the **knowledge_base** collection, generates embeddings, inserts chunks, and runs a verification search.
 
 > **Important:** The local ingestion script drops and recreates the collection when it already exists. Running it again replaces the existing local collection data.
 
