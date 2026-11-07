@@ -14,8 +14,8 @@ from hybrid_search import connect_and_load, load_all_chunks
 from api.generate import full_pipeline
 
 app = FastAPI(
-    title="UPSC Enterprise RAG System",
-    description="Production-grade API layer serving OnlyIAS PRAHAAR modules.",
+    title="Enterprise RAG API",
+    description="Document-grounded question answering API with source citations.",
     version="1.0.0"
 )
 
