@@ -66,6 +66,9 @@ def vector_search(collection, model, sub_queries, top_k=20):
 
 def bm25_search(all_chunks, sub_queries, top_k=20):
     """Keyword search — scans multi-query terms across tokenized corpus."""
+    if not all_chunks:
+        return []
+
     tokenized_corpus = [c["text"].lower().split() for c in all_chunks]
     bm25 = BM25Okapi(tokenized_corpus)
     aggregated_hits = {}
@@ -112,7 +115,11 @@ def hybrid_merge(vector_hits, bm25_hits, top_k=20):
     return [item["hit"] for item in merged]
 
 def load_all_chunks():
-    pdf_files = [f for f in os.listdir(DATA_FOLDER) if f.endswith(".pdf")]
+    if not os.path.isdir(DATA_FOLDER):
+        print(f"[Retrieval] {DATA_FOLDER} is absent; BM25 corpus will be empty.")
+        return []
+
+    pdf_files = [f for f in os.listdir(DATA_FOLDER) if f.lower().endswith(".pdf")]
     all_chunks = []
     for pdf_file in pdf_files:
         filepath = os.path.join(DATA_FOLDER, pdf_file)
