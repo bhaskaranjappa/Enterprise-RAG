@@ -6,7 +6,7 @@ from pymilvus import connections, Collection, FieldSchema, CollectionSchema, Dat
 from sentence_transformers import SentenceTransformer
 from load_chunk import extract_text_from_pdf, chunk_pages
 
-COLLECTION_NAME = "upsc_knowledge_base"
+COLLECTION_NAME = "knowledge_base"
 EMBED_DIM = 384  # bge-small output dimension
 DATA_FOLDER = "./data"
 BATCH_SIZE = 100  # insert 100 chunks at a time
@@ -33,7 +33,7 @@ def create_collection():
     ]
     schema = CollectionSchema(
         fields, 
-        description="UPSC study material chunks"
+        description="Enterprise RAG document chunks"
     )
     collection = Collection(COLLECTION_NAME, schema)
 
