@@ -14,7 +14,8 @@ from sentence_transformers import SentenceTransformer
 from groq import Groq
 
 load_dotenv()
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = os.getenv("GROQ_MODEL", "qwen/qwen3.8-27b")
+GROQ_REASONING_EFFORT = "none"  # Instruct mode: efficient, non-reasoning RAG responses
 
 def decompose_query(query: str) -> list:
     """Runs exactly once per request lifecycle to protect API limits."""
@@ -38,7 +39,10 @@ def decompose_query(query: str) -> list:
         response = client.chat.completions.create(
             model=GROQ_MODEL,
             messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": f"Split: {query}"}],
-            temperature=0.0
+            temperature=0.7,
+            top_p=0.8,
+            reasoning_effort=GROQ_REASONING_EFFORT,
+            reasoning_format="hidden"
         )
         parts = [p.strip() for p in response.choices[0].message.content.split(";")]
         return parts if len(parts) == 2 else [query]
@@ -74,7 +78,10 @@ def generate_answer(query, reranked_chunks):
     response = client.chat.completions.create(
         model=GROQ_MODEL,
         messages=[{"role": "user", "content": prompt}],
-        temperature=0.0  # Kept at 0.0 to enforce strict, zero-creativity extraction
+        temperature=0.7,
+        top_p=0.8,
+        reasoning_effort=GROQ_REASONING_EFFORT,
+        reasoning_format="hidden"
     )
     
     raw_answer = response.choices[0].message.content.strip()
