@@ -24,7 +24,7 @@
 
 Enterprise RAG is a retrieval-augmented question-answering application designed to answer questions from a defined collection of PDF documents. It combines semantic vector search with BM25 keyword retrieval, merges the candidate lists using Reciprocal Rank Fusion (RRF), and applies a CrossEncoder reranker before answer generation.
 
-The generation layer uses Groq-hosted Llama 3.3 70B Versatile with a context-constrained prompt. Answers are expected to use the retrieved context, include source references, and return **NOT FOUND** when the available context is insufficient.
+The generation layer uses Groq-hosted Qwen 3.8 27B (`qwen/qwen3.8-27b`) in instruct mode with a context-constrained prompt. Answers are expected to use the retrieved context, include source references, and return **NOT FOUND** when the available context is insufficient.
 
 The repository includes a Streamlit interface, a FastAPI endpoint, PDF ingestion utilities, local Milvus infrastructure, and an evaluation harness.
 
@@ -115,7 +115,7 @@ The vector database can be local Milvus or a configured Zilliz Cloud cluster. Th
 3. **Candidate retrieval:** The query is searched through Milvus dense retrieval and BM25 keyword retrieval. Each path returns up to 20 candidates.
 4. **Fusion:** Reciprocal Rank Fusion combines the ranked result lists.
 5. **Reranking:** **cross-encoder/ms-marco-MiniLM-L-6-v2** scores query-passage pairs. The pipeline selects up to five passages for a simple query and up to ten for a decomposed query.
-6. **Generation:** The selected context is passed to Groq using the configured **llama-3.3-70b-versatile** model ID. The prompt requires context-based answers and a **NOT FOUND** response when evidence is insufficient.
+6. **Generation:** The selected context is passed to Groq using the configured **qwen/qwen3.8-27b** model ID. The prompt requires context-based answers and a **NOT FOUND** response when evidence is insufficient.
 
 ## Technology
 
@@ -129,7 +129,7 @@ The vector database can be local Milvus or a configured Zilliz Cloud cluster. Th
 | Keyword search | rank-bm25 |
 | Rank fusion | Reciprocal Rank Fusion |
 | Reranking | CrossEncoder — ms-marco-MiniLM-L-6-v2 |
-| Answer generation | Groq API — configured Llama 3.3 70B Versatile model ID |
+| Answer generation | Groq API — Qwen 3.8 27B (`qwen/qwen3.8-27b`) |
 | Local infrastructure | Docker Compose, etcd, MinIO, Milvus |
 | Evaluation | JSON gold-standard questions and a Python API evaluation script |
 | Demo hosting | Hugging Face Spaces |
