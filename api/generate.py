@@ -28,7 +28,7 @@ def decompose_query(query: str) -> list:
 
     client = Groq(api_key=api_key)
     system_prompt = (
-        "You are an expert UPSC search optimizer. Break down the user's complex cross-document query "
+        "You are an expert cross-document search optimizer. Break down the user's complex cross-document query "
         "into exactly two separate, simplified keyword search queries targeting separate subjects.\n"
         "CRITICAL: If the query mentions an explicit material like 'geography', 'ethics', 'governance', "
         "or 'sin', make sure that keyword is explicitly present in its respective sub-query.\n"
